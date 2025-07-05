@@ -21,7 +21,7 @@ matriz_habitaciones = [
     [205, categoria_habitacion.SUITE.value, status_habitacion.RESERVADA.value, "20250314", "20250316", "V-20123456", "Maria Perez"],
     [211, categoria_habitacion.DOBLE.value, status_habitacion.LIBRE.value, "", "", "", ""],
     [212, categoria_habitacion.DOBLE.value, status_habitacion.LIBRE.value, "", "", "", ""],
-    [213, categoria_habitacion.DOBLE.value, status_habitacion.OCUPADA.value, "20250423", "20250430", "V-12345678", "Pedro Martinez"],
+    [213, categoria_habitacion.DOBLE.value, status_habitacion.OCUPADA.value, "20250423", "20250430", "V-12348765", "Pedro Martinez"],
     [214, categoria_habitacion.DOBLE.value, status_habitacion.OCUPADA.value, "20250501", "20250511", "V-17654321", "Carla Soto"],
     [215, categoria_habitacion.DOBLE.value, status_habitacion.RESERVADA.value, "20250512", "20250523", "V-21987654", "Diego Torres"],
     [221, categoria_habitacion.SENCILLA.value, status_habitacion.LIBRE.value, "", "", "", ""],  
