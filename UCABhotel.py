@@ -1,23 +1,19 @@
 import pickle
+import os
 
-try:
-    with open("hotelData.bin", 'rb') as file:
-        matriz_habitaciones = pickle.load(file)
-except FileNotFoundError:
+if os.path.exists("hotelData.bin"):
+    if os.path.getsize("hotelData.bin") > 0:
+        with open("hotelData.bin", 'rb') as file:
+            matriz_habitaciones = pickle.load(file)
+    else:
+        print("El archivo binario esta vacio. Por favor, ejecute matriz.py nuevamente para generar el archivo binario")
+        exit()
+else:
     print("El archivo binario no ha sido encontrado. Por favor, asegurese de que el archivo binario este en el directorio")
     exit()
-except pickle.UnpicklingError:
-    print("El archivo binario esta dañado. Por favor, ejecute matriz.py nuevamente para generar el archivo binario")
-    exit()
-except EOFError:
-    print("El archivo binario esta vacio. Por favor, ejecute matriz.py nuevamente para generar el archivo binario")
-    exit()
-    
-"""with open("secret.bin", 'rb') as file:
-    lu = pickle.load(file)"""
     
 print('Este programa fue elaborado por: Stephanie "Texdroid" Vielma, Luis Mora, Diego "Darv" Rivas y Luciano Di Battista')
-print('\nLider del proyecto: Stephanie "Texdroid" Vielma\n')#, lu)
+print('\nLider del proyecto: Stephanie "Texdroid" Vielma\n')
     
 def statusOrder(status):
     if status == "free":
@@ -704,3 +700,4 @@ while True:
             break
         case _:
             print(f"\n{selection} es una opcion invalida. Por favor, intente de nuevo")
+            
