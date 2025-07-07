@@ -102,19 +102,9 @@ def mergesortNum(array):
             if left_half[i][0] < right_half[j][0]:
                     array[k] = left_half[i]
                     i += 1
-            elif left_half[i][0] > right_half[j][0]:
+            else:
                 array[k] = right_half[j]
                 j += 1
-            else:    
-                left_status_prio = statusOrder(left_half[i][0])
-                right_status_prio = statusOrder(right_half[j][0])
-                
-                if left_status_prio < right_status_prio:
-                    array[k] = left_half[i]
-                    i += 1
-                else:
-                    array[k] = right_half[j]
-                    j += 1
                 
             k += 1
                 
